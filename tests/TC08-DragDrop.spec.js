@@ -1,0 +1,111 @@
+const {test, expect} = require('@playwright/test')
+
+test('Drag and Drop using inbuild command for Rome', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html')
+    const rome = await page.locator('#box6')
+    const Italy = await page.locator('#box106')
+    await rome.dragTo(Italy)
+    expect(await page.locator('#box6')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+})
+
+test('Drag and Drop using inbuild command for Oslo', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const Oslo = await page.locator('#box1')
+    const Nor = await page.locator('#box101')
+    await Oslo.dragTo(Nor)
+    expect(await page.locator('#box1')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(3000)
+})
+
+test('Drag and Drop using inbuild command for Stockholm', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const Skh = await page.locator('#box2')
+    const swe = await page.locator('#box102')
+    await Skh.dragTo(swe)
+    expect(await page.locator('#box2')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(3000)
+})
+
+test('Drag and Drop using inbuild command for Washington', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const Washington = await page.locator('#box3')
+    const US = page.locator('#box103')
+    await Washington.dragTo(US)
+    expect(await page.locator('#box3')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(3000)
+})
+
+test('Drag and Drop using inbuild command for Copenhagen', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const Copenhagen = await page.locator('#box4')
+    const Den = await page.locator('#box104')
+    await Copenhagen.dragTo(Den)
+    expect(await page.locator('#box4')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(3000)
+})
+
+test('Drag and Drop using inbuild command for Seoul', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const seoul = await page.locator('#box5')
+    const SK = await page.locator('#box105')
+    await seoul.dragTo(SK)
+    expect(await page.locator('#box5')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+})
+
+test('Drag and Drop using inbuild command for Madrid', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const Mad  = await page.locator('#box7')
+    const Spain =  await page.locator('#box107')
+    await Mad.dragTo(Spain)
+    expect(await page.locator('#box7')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(3000)
+})
+
+test('Drag and Drop using inbuild command', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#')
+    const Oslo = await page.locator('#box1')
+    const Nor = await page.locator('#box101')
+    await Oslo.dragTo(Nor)
+    expect(await page.locator('#box1')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    const Skh = await page.locator('#box2')
+    const swe = await page.locator('#box102')
+    await Skh.dragTo(swe)
+    expect(await page.locator('#box2')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    const Washington = await page.locator('#box3')
+    const US = page.locator('#box103')
+    await Washington.dragTo(US)
+    expect(await page.locator('#box3')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    const Copenhagen = await page.locator('#box4')
+    const Den = await page.locator('#box104')
+    await Copenhagen.dragTo(Den)
+    expect(await page.locator('#box4')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    const seoul = await page.locator('#box5')
+    const SK = await page.locator('#box105')
+    await seoul.dragTo(SK)
+    expect(await page.locator('#box5')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    const rome = await page.locator('#box6')
+    const Italy = await page.locator('#box106')
+    await rome.dragTo(Italy)
+    expect(await page.locator('#box6')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    const Mad  = await page.locator('#box7')
+    const Spain =  await page.locator('#box107')
+    await Mad.dragTo(Spain)
+    expect(await page.locator('#box7')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(2000)
+})
+
+test('Drag and Drop using Mouse Actions for Rome', async({page})=>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html')
+    await page.locator('#box6').hover()
+    await page.mouse.down()
+    await page.locator('#box106').hover()
+    await page.mouse.up()
+    expect(await page.locator('#box6')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+
+})
+
+test.only('Drag and Drop using Mouse Actions for Oslo')
+// npx playwright test TC08-DragDrop.spec.js --headed
