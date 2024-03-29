@@ -61,7 +61,7 @@ test('JS Prompt', async({page})=>{
     await page.waitForTimeout(3000)
 })
 
-test.only("JS Prompt Handle", async({page})=>{
+test.only("JS Prompt Handle", async({page})=>{ // =====> as per sir instruction
     await page.goto('https://the-internet.herokuapp.com/javascript_alerts')
     page.on('dialog', async prmptAlert=>{
         await expect(prmptAlert.message()).toContain("I am a JS prompt")
@@ -76,5 +76,13 @@ test.only("JS Prompt Handle", async({page})=>{
     await expect(page.locator('#result')).toHaveText('You entered: null')
     await page.waitForTimeout(4000)
 })
+
+// Screen Error if we receive
+
+// cy.on('uncaught:exception', (err, runnable) => {
+//     return false
+// });
+
+
 
 // npx playwright test TC09-Alerts.spec.js --headed
