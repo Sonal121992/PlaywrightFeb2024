@@ -45,4 +45,4 @@ test.only('Practice Calendar', async({page})=>{
     await page.waitForTimeout(6000)
 })
 
-// npx playwright test TC10-Calendar.spec.js -- headed
+// npx playwright test TC10-Calendar.spec.js --headed
