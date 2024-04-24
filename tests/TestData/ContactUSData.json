@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "sonal",
+        "lastName": "khante",
+        "email": "sonalkhante@gmail.com",
+        "msg": "I am learning playwright by importing from contactUSData.json"
+    },
+    {
+        "firstName": "chetan",
+        "lastName": "khante",
+        "email": "chetankhante@gmail.com",
+        "msg": "I am learning playwright by importing data"
+    },
+    {
+        "firstName": "indrayani",
+        "lastName": "lambat",
+        "email": "indrayanilambat@gmail.com",
+        "msg": "I am learning playwright with multiple user"
+    },
+    {
+        "firstName": "ketan",
+        "lastName": "lambat",
+        "email": "ketanlambat@gmail.com",
+        "msg": "I am learning playwright by importing data"
+    }
+]
